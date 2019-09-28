@@ -2,22 +2,20 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
-    imageUrl: 'https://picsum.photos/200'
+    count: 0
   };
   render() {
     return (
-      <React.Fragment>
-        <img src="" alt=""/>
-        <span>{this.state.count}</span>
+      <div>
+        <span className="badge badge-primary">{this.state.count}</span>
         <button>Increment</button>
-      </React.Fragment>
+      </div>
     );
   }
 
   formatCount() {
     const { count } = this.state;
-    return count === 0 ? "Zero"> : count;
+    return count === 0 ? "Zero" : count;
   }
 }
 
